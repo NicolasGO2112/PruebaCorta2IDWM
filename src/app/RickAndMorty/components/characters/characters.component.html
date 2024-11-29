@@ -1,0 +1,29 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+  @for (item of characters; track $index) {
+    <div>
+      <!-- Cambiamos las clases para un diseño horizontal y color verde -->
+      <div class="flex bg-green-500 border border-green-700 rounded-lg shadow text-white">
+        <!-- Imagen del personaje -->
+        <div class="flex-shrink-0">
+          <a href="#">
+            <img class="h-full w-32 object-cover rounded-l-lg" src={{item.image}} alt="" />
+          </a>
+        </div>
+        <!-- Contenido del personaje -->
+        <div class="p-5 flex flex-col justify-center">
+          <a href="#">
+            <h5 class="mb-2 text-xl font-bold tracking-tight">{{item.name}}</h5>
+          </a>
+          <p class="mb-3 font-bold">{{item.status}} - {{item.species}}</p>
+          <p class="mb-3 font-normal">Location:
+            <span class="font-medium">{{item.location.name}}</span>
+          </p>
+          <p class="mb-3 font-normal">Origin:
+            <span class="font-medium">{{item.origin.name}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+

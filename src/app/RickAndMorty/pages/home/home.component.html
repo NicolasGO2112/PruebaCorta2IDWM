@@ -1,0 +1,8 @@
+
+<div class = "flex justify-between items-center mt-4 w-full max-w-md">
+    <rickAndMorty-button (notifyParent) = "setNewPage($event)" [maxPage]="maxPage" [buttonNextDisabled] = "buttonNextDisabled" [buttonPreviousDisabled] = "buttonPreviousDisabled"></rickAndMorty-button>
+    <app-search-bar (notifyParent) = "getCharactersByName($event)"></app-search-bar>
+  </div>
+  <div>
+    <app-characters [characters] = "characters"></app-characters>
+  </div>
